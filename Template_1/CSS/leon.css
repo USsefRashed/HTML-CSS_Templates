@@ -1,0 +1,227 @@
+/* Start variables  */
+:root{
+    --maincolor:#10cab7;
+}
+/* End variables  */
+/* start components */
+.special-heading{
+    color: #ebeced;
+    font-size: 100px;
+    letter-spacing: -5px;
+    text-align: center;
+    margin: 0;
+}
+.special-heading + p{
+    margin: -30px 0 0;
+    text-align: center;
+    color: #746f6f;
+}
+@media(max-width:767px){
+.special-heading{
+    font-size: 60px;
+}
+.special-heading +p{
+    margin-top: -20px;
+}
+}
+/* end components */
+/* start Global styling */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* small screens */
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+
+/* medium screens */
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+    
+}
+/* large screens */
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+    
+}
+/* End of global rules */
+/* start header */
+.header{
+    padding: 20px;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.header .container .logo{
+    width: 60px;
+    height: 30px;
+}
+.header .container .links{
+    position: relative;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header .container .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .icon span{
+background-color: #333;
+margin-bottom: 5px;
+height: 2px;
+}
+.header .icon span:first-child{
+    width: 100%;
+}
+
+.header .icon span:nth-child(2){
+    width: 50%;
+    transition: 0.3s;
+}
+
+.header  .icon span:last-child{
+    width: 100%;
+}
+
+.header .container ul{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: calc(100% + 15px);
+    right: 0%;
+    list-style: none;
+    min-width: 200px;
+    background-color: rgba(234, 234, 223, 0.686);
+    display: none;
+}
+
+.header .links:hover ul {
+    display: block;
+}
+.header .container ul::before{
+    content: "";
+    top: -20px;
+    right: 5px;
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(234, 234, 223, 0.686) transparent;
+}
+.header .container ul li{
+    text-align: start;
+    
+}
+
+.header .container ul li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+    
+}
+.header .container ul li:not(:last-child) a{
+    border-bottom: solid 1px #DDD;
+}
+.header .container ul li a:hover{
+padding-left: 25px;
+color: var(--maincolor);
+}
+
+/* end header */
+
+/* start landing */
+.landing{
+    position: relative;
+    padding: 20px;
+    height: calc(100vh - 70px);
+    background-image: url("../Images/Mountain.jfif");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    color: white;
+    z-index: -1;
+}
+.landing .intro-text{
+    position: absolute;
+    left: 3%;
+    top: 35%;
+    width: 250px;
+    max-width: 100%;
+    transform: translate(28%,78%);
+}
+.landing .intro-text h1{
+    margin: 0px;
+}
+.landing .intro-text{
+    text-align: center;
+}
+.landing .intro-text p{
+    line-height: 50px;
+    font-weight: 600;
+}
+/* End landing */
+
+
+/* start feature */
+.features{
+    padding-top: 60px;
+    padding-bottom: 60px;
+background-color: rgba(242, 237, 237, 0.856);
+}
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 20px;
+}
+.features .feat{
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 15px 20px #ccc;
+}
+.features .container .feat i{
+    font-size:25px;
+    color: var(--maincolor);
+}
+.features .container .feat h3{
+    font-weight: 800;
+    margin: 30px 0px;
+    
+}
+
+.features .container .feat p{
+line-height: 1.8;
+color: rgba(50, 49, 49, 0.645);
+font-size: 17px;
+}
+/* End of features */
+/* Start services */
+.services{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* End services */
